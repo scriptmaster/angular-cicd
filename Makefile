@@ -24,6 +24,8 @@ ANGULAR_PROJECT_NAME=ng-app
 
 # port options
 angular.json-task:
+	dotnet json get angular.json cli:analytics
+	dotnet json set angular.json cli:analytics false
 	dotnet json get angular.json projects:${ANGULAR_PROJECT_NAME}:architect:serve:options:port
 	dotnet json set angular.json projects:${ANGULAR_PROJECT_NAME}:architect:serve:options:port 5005
 
